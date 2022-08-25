@@ -1,0 +1,57 @@
+{
+  "name": "puppeteer-recording-helpers",
+  "version": "1.0.0-0",
+  "description": "Test helpers for playback of puppeteer recordings from Chrome Devtool Recorder",
+  "keywords": [
+    "puppeteer",
+    "recordings",
+    "playback"
+  ],
+  "homepage": "https://github.com/spurreiter/puppeteer-recording-helpers#readme",
+  "bugs": {
+    "url": "https://github.com/spurreiter/puppeteer-recording-helpers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spurreiter/puppeteer-recording-helpers.git"
+  },
+  "license": "Unlicense",
+  "author": "spurreiter",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "types",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "scripts": {
+    "all": "npm run lint && npm run test && npm run types",
+    "lint": "eslint --ext .js .",
+    "test": "mocha -p",
+    "types": "rm -rf types; tsc --emitDeclarationOnly true --noEmitOnError && cp src/*.d.ts types"
+  },
+  "eslintIgnore": [
+    "tmp"
+  ],
+  "mocha": {
+    "exit": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.1",
+    "mocha": "^10.0.0",
+    "puppeteer": "^17.1.3",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "puppeteer": "^17.1.3"
+  }
+}
