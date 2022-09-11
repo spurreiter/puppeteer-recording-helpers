@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-recording-helpers",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "Test helpers for playback of puppeteer recordings from Chrome Devtool Recorder",
   "keywords": [
     "puppeteer",
