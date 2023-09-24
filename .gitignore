@@ -5,3 +5,4 @@ test/assets/*
 *.tgz
 *.log
 .DS_Store
+pnpm-lock.yaml

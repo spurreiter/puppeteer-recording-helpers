@@ -4,7 +4,8 @@ import { openBrowser } from '../src/index.js'
 describe('openBrowser', function () {
   it('starts headless by default', async function () {
     const { browser } = await openBrowser()
-    assert.ok(browser.process().spawnargs.includes('--headless'))
+    // console.log(browser.process().spawnargs)
+    assert.ok(browser.process().spawnargs.includes('--headless=new'))
     browser.close()
   })
 
@@ -17,6 +18,7 @@ describe('openBrowser', function () {
 
   it('starts headfully', async function () {
     const { browser } = await openBrowser({ headless: false })
+    // console.log(browser.process().spawnargs)
     assert.ok(!browser.process().spawnargs.includes('--headless'))
     browser.close()
   })

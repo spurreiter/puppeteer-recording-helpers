@@ -8,7 +8,9 @@
     "noImplicitAny": false,
     "strict": true,
     "module": "es2022",
-    "target": "es2022"
+    "target": "es2022",
+    "emitDeclarationOnly": true,
+    "noEmitOnError": true
   },
   "include": [
     "src/*.js"

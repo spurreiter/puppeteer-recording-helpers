@@ -58,13 +58,13 @@ export function waitForInViewport(element: ElementHandle, timeout?: number | und
  * @param {Page} page
  * @param {WaitForSelectorOptions} [options]
  */
-export function waitForSelector(selector: string[] | string, page: Page, options?: import("puppeteer").WaitForSelectorOptions | undefined): Promise<import("puppeteer").ElementHandle<Element> | import("puppeteer").ElementHandle<ShadowRoot>>;
+export function waitForSelector(selector: string[] | string, page: Page, options?: import("puppeteer").WaitForSelectorOptions | undefined): Promise<import("puppeteer").ElementHandle<Node>>;
 /**
  * @param {string[][]|string[]} selectors
  * @param {Page} page
  * @param {WaitForSelectorOptions} [options]
  */
-export function waitForSelectors(selectors: string[][] | string[], page: Page, options?: import("puppeteer").WaitForSelectorOptions | undefined): Promise<import("puppeteer").ElementHandle<Element> | import("puppeteer").ElementHandle<ShadowRoot>>;
+export function waitForSelectors(selectors: string[][] | string[], page: Page, options?: import("puppeteer").WaitForSelectorOptions | undefined): Promise<import("puppeteer").ElementHandle<Node>>;
 export type ElementHandle = import('puppeteer').ElementHandle;
 export type Page = import('puppeteer').Page;
 export type WaitForSelectorOptions = import('puppeteer').WaitForSelectorOptions;

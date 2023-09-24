@@ -25,7 +25,13 @@ export async function openBrowser (options, timeout = 5000) {
     ...other
   } = options || {}
 
-  const browser = await puppeteer.launch({ executablePath, headless, ...other })
+  const _headless = headless ? 'new' : false
+
+  const browser = await puppeteer.launch({
+    executablePath,
+    headless: _headless,
+    ...other
+  })
   // Chrome always opens a single blank tab
   const pages = await browser.pages()
   await pages[0].close()
